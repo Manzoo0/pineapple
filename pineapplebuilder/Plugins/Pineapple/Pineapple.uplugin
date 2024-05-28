@@ -1,0 +1,24 @@
+{
+	"FileVersion": 3,
+	"Version": 1,
+	"VersionName": "1.0",
+	"FriendlyName": "Pineapple",
+	"Description": "UE5 env optimization helper",
+	"Category": "Other",
+	"CreatedBy": "LeeGilSu",
+	"CreatedByURL": "https://github.com/Manzoo0/pineapple",
+	"DocsURL": "",
+	"MarketplaceURL": "",
+	"SupportURL": "",
+	"CanContainContent": false,
+	"IsBetaVersion": false,
+	"IsExperimentalVersion": false,
+	"Installed": false,
+	"Modules": [
+		{
+			"Name": "Pineapple",
+			"Type": "Editor",
+			"LoadingPhase": "Default"
+		}
+	]
+}
