@@ -1,0 +1,13 @@
+# ignore temp folders
+.vs/
+DerivedDataCache/
+Saved/
+
+# ignore Intermediate folder where ever
+**/Intermediate/
+**/Binaries/
+
+#ignore files
+*.vsconfig
+*.sln
+*.uasset
