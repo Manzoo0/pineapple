@@ -18,11 +18,14 @@ void FPineappleEditorModeCommands::RegisterCommands()
 {
 	TArray <TSharedPtr<FUICommandInfo>>& ToolCommands = Commands.FindOrAdd(NAME_Default);
 
-	UI_COMMAND(SimpleTool, "Show Actor Info", "Opens message box with info about a clicked actor", EUserInterfaceActionType::Button, FInputChord());
-	ToolCommands.Add(SimpleTool);
+	//UI_COMMAND(SimpleTool, "Show Actor Info", "Opens message box with info about a clicked actor", EUserInterfaceActionType::Button, FInputChord());
+	//ToolCommands.Add(SimpleTool);
 
-	UI_COMMAND(InteractiveTool, "Measure Distance", "Measures distance between 2 points (click to set origin, shift-click to set end point)", EUserInterfaceActionType::ToggleButton, FInputChord());
-	ToolCommands.Add(InteractiveTool);
+	//UI_COMMAND(InteractiveTool, "Measure Distance", "Measures distance between 2 points (click to set origin, shift-click to set end point)", EUserInterfaceActionType::ToggleButton, FInputChord());
+	//ToolCommands.Add(InteractiveTool);
+
+	UI_COMMAND(UIC_MergeHelper, "MergeHelper", "Merge Helper", EUserInterfaceActionType::ToggleButton, FInputChord());
+	ToolCommands.Add(UIC_MergeHelper);
 }
 
 TMap<FName, TArray<TSharedPtr<FUICommandInfo>>> FPineappleEditorModeCommands::GetCommands()

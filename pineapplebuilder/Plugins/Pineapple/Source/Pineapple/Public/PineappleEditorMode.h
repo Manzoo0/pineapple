@@ -22,8 +22,9 @@ class UPineappleEditorMode : public UEdMode
 public:
 	const static FEditorModeID EM_PineappleEditorModeId;
 
-	static FString SimpleToolName;
-	static FString InteractiveToolName;
+	//static FString SimpleToolName;
+	//static FString InteractiveToolName;
+	static FString MergeHelperName;
 
 	UPineappleEditorMode();
 	virtual ~UPineappleEditorMode();

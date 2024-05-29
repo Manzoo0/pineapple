@@ -14,6 +14,7 @@
 ////////////////////////////////////////////////////////////////////////// 
 #include "Tools/PineappleSimpleTool.h"
 #include "Tools/PineappleInteractiveTool.h"
+#include "Tools/MergeHelper.h"
 
 // step 2: register a ToolBuilder in FPineappleEditorMode::Enter() below
 
@@ -22,8 +23,9 @@
 
 const FEditorModeID UPineappleEditorMode::EM_PineappleEditorModeId = TEXT("EM_PineappleEditorMode");
 
-FString UPineappleEditorMode::SimpleToolName = TEXT("Pineapple_ActorInfoTool");
-FString UPineappleEditorMode::InteractiveToolName = TEXT("Pineapple_MeasureDistanceTool");
+//FString UPineappleEditorMode::SimpleToolName = TEXT("Pineapple_ActorInfoTool");
+//FString UPineappleEditorMode::InteractiveToolName = TEXT("Pineapple_MeasureDistanceTool");
+FString UPineappleEditorMode::MergeHelperName = TEXT("Pineapple_MergeHelper");
 
 
 UPineappleEditorMode::UPineappleEditorMode()
@@ -59,11 +61,12 @@ void UPineappleEditorMode::Enter()
 	////////////////////////////////////////////////////////////////////////// 
 	const FPineappleEditorModeCommands& SampleToolCommands = FPineappleEditorModeCommands::Get();
 
-	RegisterTool(SampleToolCommands.SimpleTool, SimpleToolName, NewObject<UPineappleSimpleToolBuilder>(this));
-	RegisterTool(SampleToolCommands.InteractiveTool, InteractiveToolName, NewObject<UPineappleInteractiveToolBuilder>(this));
+	//RegisterTool(SampleToolCommands.SimpleTool, SimpleToolName, NewObject<UPineappleSimpleToolBuilder>(this));
+	//RegisterTool(SampleToolCommands.InteractiveTool, InteractiveToolName, NewObject<UPineappleInteractiveToolBuilder>(this));
+	RegisterTool(SampleToolCommands.UIC_MergeHelper, MergeHelperName, NewObject<UMergeHelper>(this));
 
 	// active tool type is not relevant here, we just set to default
-	GetToolManager()->SelectActiveToolType(EToolSide::Left, SimpleToolName);
+	//GetToolManager()->SelectActiveToolType(EToolSide::Left, MergeHelperName);
 }
 
 void UPineappleEditorMode::CreateToolkit()
