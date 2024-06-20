@@ -26,8 +26,11 @@ public class Pineapple : ModuleRules
 			new string[]
 			{
 				"Core",
-				// ... add other public dependencies that you statically link with here ...
-			}
+                "CoreUObject",
+                "Engine",
+                "EditorFramework",
+                "UnrealEd"
+            }
 			);
 			
 		
@@ -43,7 +46,6 @@ public class Pineapple : ModuleRules
 				"Engine",
 				"Slate",
 				"SlateCore",
-				// ... add private dependencies that you statically link with here ...	
 			}
 			);
 		

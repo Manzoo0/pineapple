@@ -8,6 +8,7 @@
 #include "Widgets/Layout/SBox.h"
 #include "Widgets/Text/STextBlock.h"
 #include "ToolMenus.h"
+#include "SMainWidget.h"
 
 static const FName PineappleTabName("Pineapple");
 
@@ -54,22 +55,12 @@ void FPineappleModule::ShutdownModule()
 
 TSharedRef<SDockTab> FPineappleModule::OnSpawnPluginTab(const FSpawnTabArgs& SpawnTabArgs)
 {
-	FText WidgetText = FText::Format(
-		LOCTEXT("WindowWidgetText", "Add code to {0} in {1} to override this window's contents"),
-		FText::FromString(TEXT("FPineappleModule::OnSpawnPluginTab")),
-		FText::FromString(TEXT("Pineapple.cpp"))
-		);
-
 	return SNew(SDockTab)
 		.TabRole(ETabRole::NomadTab)
 		[
-			// Put your tab content here!
 			SNew(SBox)
-			.HAlign(HAlign_Center)
-			.VAlign(VAlign_Center)
 			[
-				SNew(STextBlock)
-				.Text(WidgetText)
+				SNew(SMainWidget)
 			]
 		];
 }

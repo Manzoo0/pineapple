@@ -17,4 +17,10 @@ public:
 
 	/** Constructs this widget with InArgs */
 	void Construct(const FArguments& InArgs);
+
+	FReply btn_tohlodproxy_onclicked();
+	FReply btn_exclusiveselect_onclicked();
+
+private:
+	void SetupHLODClusterForEachGroup(TArray<AActor*> InActors, int32 InLODLevel = 0);
 };
