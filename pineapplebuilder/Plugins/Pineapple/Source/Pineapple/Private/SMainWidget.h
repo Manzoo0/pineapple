@@ -3,6 +3,7 @@
 #pragma once
 
 #include "CoreMinimal.h"
+#include "PineappleCore.h"
 #include "Widgets/SCompoundWidget.h"
 
 /**
@@ -20,7 +21,6 @@ public:
 
 	FReply btn_tohlodproxy_onclicked();
 	FReply btn_exclusiveselect_onclicked();
+	FReply btn_generateshadowproxyfromlodactor_onclicked();
 
-private:
-	void SetupHLODClusterForEachGroup(TArray<AActor*> InActors, int32 InLODLevel = 0);
 };
