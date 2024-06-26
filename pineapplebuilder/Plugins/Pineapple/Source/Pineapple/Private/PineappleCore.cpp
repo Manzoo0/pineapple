@@ -29,6 +29,27 @@ TArray<TObjectPtr<AActor>> Pineapple::GetSelectedActors()
 	return OutActors;
 }
 
+TArray<TObjectPtr<ALODActor>> Pineapple::GetAllLODActorsInLevel()
+{
+	TArray<TObjectPtr<ALODActor>> OutActors;
+
+	UWorld* World = GEditor->GetEditorWorldContext(false).World();
+	if (World)
+	{
+		//gather ALODActors (built HLOD cluster)
+		for (TActorIterator<ALODActor> It(World); It; ++It)
+		{
+			//gathering ALODActor
+			if (*It)
+			{
+				OutActors.Add(*It);
+			}
+		}
+	}
+
+	return OutActors;
+}
+
 void Pineapple::CreateNewClusterFromActors(TArray<TObjectPtr<AActor>> InActors, int32 InLODLevel /*= 0*/)
 {
 	//get world

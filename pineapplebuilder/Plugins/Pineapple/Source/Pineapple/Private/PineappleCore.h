@@ -8,9 +8,12 @@
 
 #define NAME_SHADOWPROXY TEXT("SHADOWPROXY")
 
+class ALODActor;
+
 namespace Pineapple
 {
 	TArray<TObjectPtr<AActor>> GetSelectedActors();
+	TArray<TObjectPtr<ALODActor>> GetAllLODActorsInLevel();
 	void CreateNewClusterFromActors(TArray<TObjectPtr<AActor>> InActors, int32 InLODLevel = 0);
 	bool GenerateShadowproxyFromLODActors();
 	void ExclusiveSelect();
